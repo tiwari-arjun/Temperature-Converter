@@ -1,0 +1,116 @@
+body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7fafc; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 16px; /* Body padding for small screens */
+        }
+
+.main-container {
+            width: 100%;
+            max-width: 512px; /* Equivalent to max-w-lg */
+            background-color: #fff;
+            padding: 40px; 
+            border-radius: 12px; 
+            border: 1px solid #bfdbfe; 
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Typography and spacing */
+        .title {
+            font-size: 1.875rem; 
+            font-weight: 800; 
+            text-align: center;
+            color: #1d4ed8; 
+            margin-bottom: 24px;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #6b7280; 
+            margin-bottom: 32px;
+        }
+
+        .label {
+            display: block;
+            font-size: 0.875rem; 
+            font-weight: 500; 
+            color: #374151; 
+            margin-bottom: 4px;
+        }
+        
+        /* --- Flexbox for responsive layout --- */
+        /* Default: vertical stack on mobile */
+        .responsive-group {
+            display: flex;
+            flex-direction: column; 
+            gap: 16px; 
+            margin-bottom: 24px;
+        }
+
+        /* Media query for tablet/desktop (min-width: 640px) */
+        @media (min-width: 640px) {
+            .responsive-group {
+                flex-direction: row; /* Horizontal layout on larger screens */
+            }
+            /* Input field takes 2/3 width, dropdown takes 1/3 */
+            .input-container {
+                width: 66.666667%; 
+            }
+            .dropdown-container {
+                width: 33.333333%;
+            }
+        }
+        /* --- End Flexbox --- */
+
+        /* Input and Select shared styles */
+        .field {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #d1d5db; 
+            border-radius: 8px; 
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+            box-sizing: border-box;
+            background-color: white;
+            /* Added margin-bottom for full-width elements to replicate space-y-6 */
+            margin-bottom: 24px; 
+        }
+        
+        .field:focus {
+            border-color: #3b82f6; 
+            outline: 0;
+            box-shadow: 0 0 0 1px #3b82f6; 
+        }
+        
+        /* Result Section */
+        .result-section {
+            margin-top: 32px;
+            padding-top: 24px;
+            border-top: 1px solid #e5e7eb; 
+        }
+
+        .result-title {
+            font-size: 1.25rem; 
+            font-weight: 600; 
+            color: #4b5563; 
+            margin-bottom: 8px;
+        }
+
+        .result-output {
+            background-color: #eff6ff; 
+            color: #1e40af; 
+            font-size: 2rem; 
+            font-weight: 700; 
+            padding: 16px;
+            border-radius: 8px;
+            text-align: center;
+            border: 2px solid #bfdbfe; 
+        }
