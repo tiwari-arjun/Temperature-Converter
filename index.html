@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" class="css">
+  <title>Temp Converter</title>
+</head>
+<body>
+  <div class="main-container">
+    <h1 class="title">
+      <span style="margin-right: 8px;"> &#x263C</span>
+      Temp Converter
+      <span style="margin-left: 8px;">&#x263C</span>
+    </h1>
+
+      <p class="subtitle">Convert between Celsius, Fahrenheit, and Kelvin.</p>
+<div>
+      <!--Input Section-->
+      <div class="responsive-group">
+
+        <div class="input-container">
+          <label for="temperatureInput" class="label">Enter Value</label>
+          <input type="number" id="temperatureInput" class="field" placeholder="eg:32" value="0" oninput="convertTemperature()">
+        </div>
+
+        <!--Dropdown Section-->
+      <div class="dropdown-container">
+        <label for="fromUnit" class="label">From</label>
+        <select id="fromUnit" onclick="convertTemperature()" class="field">
+          <option value="C" selected>Celsius</option>
+          <option value="F">Fahrenheit</option>
+          <option value="K">Kelvin</option>
+        </select>
+      </div>
+      </div>
+
+      <!--Full Width Section-->
+       <div class="full-width-dropdown">
+                <label for="toUnit" class="label">To</label>
+                <select id="toUnit" 
+                        class="field"
+                        onchange="convertTemperature()">
+                    <option value="C" selected>Celsius (°C)</option>
+                    <option value="F">Fahrenheit (°F)</option>
+                    <option value="K">Kelvin (K)</option>
+                </select>
+            </div>
+</div>
+
+<div class="result-section">
+<h2 class="result-title">Converted Result</h2>
+  <div id="resultOutput" 
+                 class="result-output">
+                
+            </div>
+</div>
+</div>
+<script src="index.js"></script>
+</body>
+</html>
